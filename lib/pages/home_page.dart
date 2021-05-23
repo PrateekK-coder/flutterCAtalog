@@ -9,7 +9,10 @@ class Homepage extends StatelessWidget {
         title: Center(
           child: Padding(
             padding: const EdgeInsets.only(right: 40.0),
-            child: Text("Catalog App"),
+            child: Text(
+              "Catalog App",
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ),
       ),
