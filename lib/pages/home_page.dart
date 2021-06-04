@@ -1,8 +1,15 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_catalog/models/items.dart';
 import 'package:flutter_catalog/widgets/drawer.dart';
-import 'package:flutter_catalog/models/items.dart';
 import 'package:flutter_catalog/widgets/item_widget.dart';
+import 'dart:convert';
+import 'package:flutter_catalog/widgets/themes.dart';
+
+import 'home_widgets/catalog_header.dart';
+import 'home_widgets/catalog_list.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -10,35 +17,46 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  void initState() {}
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadData();
+  }
+
+  loadData() async {
+    await Future.delayed(Duration(seconds: 2));
+    var catalogJson = await rootBundle.loadString("assets/files/catalog.json");
+    var decodedData = jsonDecode(catalogJson);
+    var productData = decodedData["products"];
+    CatalogModel.items =
+        List.from(productData).map<Item>((item) => Item.fromMap(item)).toList();
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
-    final dummyList = List.generate(9, (index) => CatalogModel.items[0]);
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Padding(
-            padding: const EdgeInsets.only(right: 40.0),
-            child: Text(
-              "Catalog App",
-              style: TextStyle(color: Colors.black),
-            ),
-          ),
-        ),
+      backgroundColor: MyTheme.creamColor,
+      body: SafeArea(
+        child: Container(
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CatalogHeader(),
+                if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+                  Expanded(child: CatalogList())
+                else
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 300.0),
+                      child: CircularProgressIndicator(),
+                    ),
+                  )
+              ],
+            )),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView.builder(
-          itemCount: dummyList.length,
-          itemBuilder: (context, index) {
-            return ItemWidgget(
-              item: dummyList[index],
-            );
-          },
-        ),
-      ),
-      drawer: MyDrawer(),
     );
   }
 }
