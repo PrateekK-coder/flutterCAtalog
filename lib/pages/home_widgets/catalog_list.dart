@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/items.dart';
+import 'package:flutter_catalog/pages/home_detail_page.dart';
 import 'package:flutter_catalog/widgets/themes.dart';
 
 import 'catalog_image.dart';
@@ -12,7 +13,16 @@ class CatalogList extends StatelessWidget {
       itemCount: CatalogModel.items.length,
       itemBuilder: (context, index) {
         final catalog = CatalogModel.items[index];
-        return CatalogItem(catalog: catalog);
+        return InkWell(
+            onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeDetailPage(
+                      catalog: catalog,
+                    ),
+                  ),
+                ),
+            child: CatalogItem(catalog: catalog));
       },
     );
   }
@@ -29,12 +39,16 @@ class CatalogItem extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(10)),
+            color: Theme.of(context).cardColor,
+            borderRadius: BorderRadius.circular(10)),
         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         child: Row(
           children: [
-            CatalogImage(
-              image: catalog.imageUrl,
+            Hero(
+              tag: Key(catalog.id.toString()),
+              child: CatalogImage(
+                image: catalog.imageUrl,
+              ),
             ),
             Expanded(
               child: Padding(
@@ -54,7 +68,7 @@ class CatalogItem extends StatelessWidget {
                     Text(
                       catalog.desc,
                     ),
-                    SizedBox(height: 20.0),
+                    SizedBox(height: 12.0),
                     ButtonBar(
                       alignment: MainAxisAlignment.spaceBetween,
                       buttonPadding: EdgeInsets.zero,
@@ -67,10 +81,10 @@ class CatalogItem extends StatelessWidget {
                         ),
                         ElevatedButton(
                           onPressed: () {},
-                          child: Text("Buy"),
+                          child: Text("Add to cart"),
                           style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(MyTheme.bluishColor),
+                            backgroundColor: MaterialStateProperty.all(
+                                Theme.of(context).buttonColor),
                             shape: MaterialStateProperty.all(
                               StadiumBorder(),
                             ),

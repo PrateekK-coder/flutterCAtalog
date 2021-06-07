@@ -10,6 +10,7 @@ import 'package:flutter_catalog/pages/home_widgets/catalog_list.dart';
 import 'package:flutter_catalog/widgets/item_widget.dart';
 import 'dart:convert';
 import 'package:flutter_catalog/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 import 'home_widgets/catalog_header.dart';
 
@@ -43,10 +44,11 @@ class _HomepageState extends State<Homepage> {
         onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
         child: Icon(
           Icons.add_shopping_cart,
+          color: Colors.white,
         ),
-        backgroundColor: MyTheme.bluishColor,
+        backgroundColor: Theme.of(context).buttonColor,
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: Theme.of(context).canvasColor,
       body: SafeArea(
         child: Container(
             padding: EdgeInsets.all(10.0),

@@ -14,7 +14,7 @@ class CatalogHeader extends StatelessWidget {
             style: TextStyle(
               fontSize: 50,
               fontWeight: FontWeight.bold,
-              color: MyTheme.bluishColor,
+              color: Theme.of(context).accentColor,
             ),
           ),
         ),

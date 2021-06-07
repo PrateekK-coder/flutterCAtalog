@@ -12,10 +12,12 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: MyTheme.creamColor,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
+      backgroundColor: Theme.of(context).canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: Theme.of(context).cardColor,
         child: Padding(
           padding: const EdgeInsets.all(32.0),
           child: ButtonBar(
@@ -25,9 +27,9 @@ class HomeDetailPage extends StatelessWidget {
               Text(
                 "\$${catalog.price}",
                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
-                ),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                    color: Theme.of(context).accentColor),
               ),
               ConstrainedBox(
                 constraints: BoxConstraints.tightFor(width: 120.0, height: 50),
@@ -38,8 +40,8 @@ class HomeDetailPage extends StatelessWidget {
                     style: TextStyle(fontSize: 15),
                   ),
                   style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(MyTheme.bluishColor),
+                    backgroundColor: MaterialStateProperty.all(
+                        Theme.of(context).buttonColor),
                     shape: MaterialStateProperty.all(
                       StadiumBorder(),
                     ),
@@ -67,7 +69,7 @@ class HomeDetailPage extends StatelessWidget {
                   edge: VxEdge.TOP,
                   child: Container(
                     width: context.screenWidth,
-                    color: Colors.white,
+                    color: Theme.of(context).cardColor,
                     child: Padding(
                       padding: const EdgeInsets.only(top: 64),
                       child: Column(

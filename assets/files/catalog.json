@@ -6,7 +6,7 @@
             "desc": "Apple Iphone 12th Generation",
             "price": 999,
             "color": "#33505a",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc"
+            "image": "https://pnglux.com/wp-content/uploads/2021/04/1617576481_iPhone-12-PNG-Transparent-HD-990x990.png"
         },
         {
                "id": 2,
@@ -14,15 +14,15 @@
                "desc": "Google pixel 5th generation",
                "price": 699,
                "color": "#00ac51",
-               "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0JhwLvm_uLDLc-la7hK9WyVpe9naJFcebKfhcICiq2KtvXDePNAU_9QO06LPcQ0K0fLByc7m&usqp=CAc"
+               "image":"https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2020/09/Eir74YNXsAA_AOA.png?ssl=1"
          },
          {
              "id": 3,
              "name": "Macbook air M1",
-             "desc": "Apple Macbook Air,Rosetta engine enabled",
+             "desc": "Apple Macbook Air,Rosetta Engine",
              "price": 1099,
              "color": "#e0bfae",
-             "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-gallery3-20201110?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1603399121000"
+             "image": "https://photos5.appleinsider.com/price_guide/m1-macbook-pro-pp-header.png"
          },
          {
              "id": 4,
@@ -30,7 +30,7 @@
              "desc": "Sony PlayStation 5th Generation",
              "price": 500,
              "color":"#544ee4",
-             "image":"https://rukminim1.flixcart.com/image/416/416/kj7gwi80/gamingconsole/t/v/v/cfi-1008a01r-825-sony-no-original-imafytxe7twjskbx.jpeg?q=70"
+             "image":"https://lh3.googleusercontent.com/proxy/9sk58ApwGON-hJwKu5T4Ff9pyRnGRkvQ3BaRsph4jRIzvrfrvrswCPgfzUVL6VSupDLAPNETIyzTl59synzRahpWSGyBS-WQJuBYvAABxqWl3JLUUNZVyRGAAs_rj7B3t2MOYrSyyKactK_hi9_iFfbHZAhrYF7UtohWbi_if-CGYW1t8utfl35OUqE"
          },
          {
              "id":5,
@@ -38,7 +38,7 @@
             "desc": "Airpods pro",
             "price":249,
             "color":"#544ee4",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROEs084z65psoo06zYl5R0tUzywOVKVQZzmzqCj3PDP1vVJTWv3gGwGMFENSy4qV4n7sEQjE&usqp=CAc"
+            "image":"https://images.macrumors.com/t/URu7wcrlM4PYR3ih6bIoq84wxUo=/1600x0/article-new/2020/04/AirPods-PRo-isolated.png"
         },
          {
             "id": 6,
@@ -46,7 +46,7 @@
             "desc": "Apple iPad Pro 2020 edition",
             "price": 799,
             "color": "#f73984",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNzUeRQ5uH7E3hpECib8qxdhfHv6SnUGT7mOsew_xiOoqRR7ZpdH-TQ4J6-HuIEfqHimYyPXWH&usqp=CAc"
+            "image": "https://www.rentacomputer.com/images/ipad-pro.png"
         },
         {
             "id": 7,
@@ -54,7 +54,7 @@
             "desc": "Samsung Galaxy S21 Ultra 2021 edition",
             "price": 1299,
             "color": "#1c1c1c",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT_PZcc0wicVYR992s5QCIDLYy8t-z-9kibTUdWZBN2sd86aaqdAJfhvxAwZNWV9wfdzDikpr1&usqp=CAc"
+            "image": "https://ozeroneshop.com/img/product/samsung-galaxy-s21-ultra/samsung-galaxy-s21-ultra_1612099350.png"
         },
         {
             "id": 8,
@@ -62,7 +62,7 @@
             "desc": "Samsung Galaxy S21 2021 edition",
             "price": 899,
             "color": "#7c95eb",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNHd7FwarbxA1xdMFt24KazjcR4dWPH_t_T5dz4YNK1s7rJAQ8gOIuR_NRw6eeiQgFhbZ9sAN&usqp=CAc"
+            "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/sm-g991bzwdmea/gallery/levant-galaxy-s21-5g-g991-375817-sm-g991bzwdmea-421565229?$720_576_PNG$"
         },
         {
             "id": 9,
