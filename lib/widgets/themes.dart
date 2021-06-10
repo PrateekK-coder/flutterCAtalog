@@ -27,7 +27,10 @@ class MyTheme {
         buttonColor: darkBluishColor,
         primaryTextTheme: GoogleFonts.latoTextTheme(),
         appBarTheme: AppBarTheme(
-          textTheme: Theme.of(context).textTheme,
+          textTheme: Theme.of(context).textTheme.copyWith(
+                headline6:
+                    context.textTheme.headline6.copyWith(color: Colors.white),
+              ),
           color: Colors.black,
           elevation: 0,
           iconTheme: IconThemeData(color: Colors.white),
